@@ -6,7 +6,11 @@ var legendMedia = L.control({position: 'bottomright'});
 var grades=[0,20,40,60,80,100,120,140,160];
 var LayerMedia,GeoLayer2,GeoLayer3,mesmediaN;
 mapMedia.doubleClickZoom.disable();
+mapMedia.scrollWheelZoom.disable();
 mapVis04.doubleClickZoom.disable();
+mapVis04.scrollWheelZoom.disable();
+mapVistaxi.scrollWheelZoom.disable();
+mapVistaxi.doubleClickZoom.disable();
 var infoMedia = L.control();
 
 //-- MAPA DE MÉDIA COM ANIMAÇÃO DA ETAPA DE PERGUNTAS AO USUÁRIO. --
