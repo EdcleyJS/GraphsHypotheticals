@@ -11,7 +11,7 @@ $(document).ready(function () {
 	//var laço= trimestre.length;
 	//var laço= dias.length;
 	//console.log(laço);
-	var sorteados=shuffle(meses); //[];
+	sorteados=shuffle(meses); //[];
 	/*for (var i = 0; i <3; i++) {
 		n=true;
 		while(n==true){
@@ -22,12 +22,8 @@ $(document).ready(function () {
 			}
 		}
 	}*/
-	async function animacao(){
+	/*async function animacao(){
 		for (var i = 0; i < sorteados.length; i++) {
-			//anoSelecionado=anos[i];
-			//trimestreSelecionado= trimestre[i];
-
-			//diaSelecionado= dias[i];
 			if(hops){
 				mesmedia= sorteados[i];
 				inicioMedia(dataset);
@@ -38,7 +34,7 @@ $(document).ready(function () {
 			}
 			await sleep(460);
 		}
-	}
+	}*/
 	async function animacaoT(){
 		for (var i = 0; i < sorteados.length; i++) {
 			//anoSelecionado=anos[i];
@@ -72,6 +68,8 @@ $(document).ready(function () {
 				}else if(sorteados[i]=='Dez'){
 					mesmediaN=11;
 				}
+				inicioMedia(dataset);
+				Vis04TutorialFunction(dataset);
 				inicioTaxi(datasettaxi);
 			}
 			if(i==(sorteados.length-1)){
@@ -80,6 +78,10 @@ $(document).ready(function () {
 			await sleep(460);
 		}
 	}
-	animacao();
+	//animacao();
 	animacaoT();
+});
+
+$(document).ready(function () {
+
 });
