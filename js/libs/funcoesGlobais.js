@@ -841,7 +841,7 @@ function geraperguntas(perguntas,index,vis){
   }else{
     for (var i = 0; i < pergunta.op.length; i++) {
       var div1 = document.createElement("div");
-      div1.setAttribute('class',"form-group col-md-4");
+      div1.setAttribute('class',"form-group col-sm-3 col-md-3 col-lg-3 col-xl-3");
       var input1= document.createElement("input");
       input1.setAttribute('type','hidden');
       input1.setAttribute('class','clicks');
