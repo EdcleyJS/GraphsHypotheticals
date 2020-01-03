@@ -6,41 +6,9 @@ $(document).ready(function () {
 	function sleep(ms) {
 	  return new Promise(resolve => setTimeout(resolve, ms));
 	}
-
-	//var laço= anos.length;
-	//var laço= trimestre.length;
-	//var laço= dias.length;
-	//console.log(laço);
-	sorteados=shuffle(meses); //[];
-	/*for (var i = 0; i <3; i++) {
-		n=true;
-		while(n==true){
-			var s= Math.floor((Math.random()*12));
-			n = sorteados.includes(meses[s]);
-			if (n==false) {
-				sorteados.push(meses[s]);
-			}
-		}
-	}*/
-	/*async function animacao(){
-		for (var i = 0; i < sorteados.length; i++) {
-			if(hops){
-				mesmedia= sorteados[i];
-				inicioMedia(dataset);
-				Vis04TutorialFunction(dataset);
-			}
-			if(i==(sorteados.length-1)){
-				i=-1;
-			}
-			await sleep(460);
-		}
-	}*/
+	sorteados=shuffle(meses); 
 	async function animacaoT(){
 		for (var i = 0; i < sorteados.length; i++) {
-			//anoSelecionado=anos[i];
-			//trimestreSelecionado= trimestre[i];
-
-			//diaSelecionado= dias[i];
 			if(hops){
 				mesmedia= sorteados[i];
 				if(sorteados[i]=='Jan'){
@@ -78,10 +46,5 @@ $(document).ready(function () {
 			await sleep(660);
 		}
 	}
-	//animacao();
 	animacaoT();
-});
-
-$(document).ready(function () {
-
 });

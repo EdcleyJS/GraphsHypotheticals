@@ -4,31 +4,22 @@ var mapMedia = L.map('vis4',{ zoomControl: false }).setView([-8.305448,-37.82242
 var mapVis04 = L.map('vis04',{ zoomControl: false }).setView([-8.305448,-37.822426], 8);
 var mapTaxi= L.map('vistaxi',{ zoomControl: false }).setView([40.752866,-73.986023], 13);
 var legendMedia = L.control({position: 'bottomright'});
-//var grades=[0,20,40,60,80,100,120,140,160];var grades=[0,30,60,90,120,150,180,210,240];
 var grades=[0,30,60,90,120,150,180,210,240];
 var LayerMedia,GeoLayer2,GeoLayer3,mesmedia,mesmediaN;
-mapMedia.doubleClickZoom.disable();
-mapMedia.scrollWheelZoom.disable();
-mapVis04.doubleClickZoom.disable();
-mapVis04.scrollWheelZoom.disable();
-mapTaxi.scrollWheelZoom.disable();
-mapTaxi.doubleClickZoom.disable();
+mapMedia.doubleClickZoom.disable();mapMedia.scrollWheelZoom.disable();mapVis04.doubleClickZoom.disable();mapVis04.scrollWheelZoom.disable();mapTaxi.scrollWheelZoom.disable();mapTaxi.doubleClickZoom.disable();
 var infoMedia = L.control();
-
 //-- MAPA DE MÉDIA COM ANIMAÇÃO DA ETAPA DE PERGUNTAS AO USUÁRIO. --
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png?', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
   subdomains: 'abcd',
   maxZoom: 18
   }).addTo(mapMedia);
-
 //-- DIV INFO DO MAPA CONTROLADO --
 infoMedia.onAdd = function (mymap) {
   this._div = L.DomUtil.create('div', 'info');
   this.update();
   return this._div;
 };
-
 //-- DIV LEGENDA DO MAPA CONTROLADO --
 legendMedia.onAdd = function (mapMedia) {
   var div = L.DomUtil.create('div', 'info legend');
@@ -38,7 +29,6 @@ legendMedia.onAdd = function (mapMedia) {
   return div;
 };
 legendMedia.addTo(mapMedia);
-
 //-- FUNÇÃO QUE DESENHA E CONTROLA OS PONTOS NO MAPA --
 function inicioMedia(dados){
   var maximo=0;
@@ -124,14 +114,12 @@ function inicioMedia(dados){
   }
   infoMedia.addTo(mapMedia);
 }
-
 //-- MAPA DE MÉDIA COM ANIMAÇÃO DA ETAPA DE PERGUNTAS AO USUÁRIO. --
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png?', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
   subdomains: 'abcd',
   maxZoom: 18
 }).addTo(mapVis04);
-
 //-- DIV INFO DO MAPA CONTROLADO --
 var infoVis04=L.control();
 infoVis04.onAdd = function (mymap) {
@@ -139,7 +127,6 @@ infoVis04.onAdd = function (mymap) {
   this.update();
   return this._div;
 };
-
 //-- DIV LEGENDA DO MAPA CONTROLADO --
 var legendVis04 = L.control({position: 'bottomright'});
 legendVis04.onAdd = function (mapMedia) {
@@ -150,7 +137,6 @@ legendVis04.onAdd = function (mapMedia) {
   return div;
 };
 legendVis04.addTo(mapVis04);
-
 //-- FUNÇÃO QUE DESENHA E CONTROLA OS PONTOS NO MAPA --
 function Vis04TutorialFunction(dados){
   var maximo=0;
@@ -236,7 +222,6 @@ function Vis04TutorialFunction(dados){
   }
   infoVis04.addTo(mapVis04);
 }
-
 //-- MAPA DE MÉDIA COM ANIMAÇÃO DA ETAPA DE PERGUNTAS AO USUÁRIO. --
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png?', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
@@ -261,7 +246,6 @@ legendTaxi.onAdd = function (mapMedia) {
   return div;
 };
 legendTaxi.addTo(mapTaxi);
-
 //-- FUNÇÃO QUE DESENHA E CONTROLA OS PONTOS NO MAPA --
 function inicioTaxi(dados){
   var maximo=0;
