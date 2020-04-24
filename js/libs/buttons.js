@@ -267,10 +267,10 @@ $(document).ready(function () {
 		id=id.substring(0, 4);
 		var p=findP(novodataset,id);
 		p=p.highlights;
-		opcoes=[];
 		p.forEach(function(d,i){
 		    opcoes.push(d);
 		});
+		opcoes=[];		
 		if(base=='C'){
 			$('#chuvaview').show();
 			$('#taxiview').hide();
@@ -295,7 +295,7 @@ $(document).ready(function () {
 			}else if($('#'+entid).val()==undefined && $('#'+entid).children().length>0){
 				$(this).parent().parent()[0].classList.add('was-validated');
 			}else{
-			   	opcoes=[];
+
 			   	stepper4.next();
 			   	$(this).parent().parent().removeClass("was-validated");
 			   	var id= $(this).parent().next().find('div >div > div>').siblings()[0].id;
@@ -306,6 +306,7 @@ $(document).ready(function () {
 			    p.forEach(function(d,i){
 			    	opcoes.push(d);
 			    });
+			    opcoes=[];
 			    if(base=='C'){
 					$('#chuvaview').show();
 					$('#taxiview').hide();
@@ -350,10 +351,10 @@ $(document).ready(function () {
 				id=id.substring(0, 4);
 				var p=findP(novodataset,id);
 			    p=p.highlights;
-				opcoes=[];
 				p.forEach(function(d,i){
 				    opcoes.push(d);
 				});
+				opcoes=[];
 				if(base=='C'){
 					$('#chuvaview').show();
 					$('#taxiview').hide();
