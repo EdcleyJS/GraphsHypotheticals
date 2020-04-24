@@ -230,7 +230,7 @@ $(document).ready(function () {
         skin: "big",
         grid: true,
         onChange: function (data) {
-        	opcoes=['Recife','Caruaru'];
+        	opcoes=[];
             alpha=data.from;
             Vis01TutorialFunction(dataset,false);
         }
@@ -246,7 +246,7 @@ $(document).ready(function () {
         skin: "big",
         grid: true,
         onChange: function (data) {
-        	opcoes=['Recife','Caruaru'];
+        	opcoes=[];
             left=data.from;
             right=data.to;
             Vis02TutorialFunction(dataset,true);
@@ -256,7 +256,7 @@ $(document).ready(function () {
 	$('.bs-stepper')[0].addEventListener('shown.bs-stepper', function (event) {
 		if(event.detail.indexStep==3){
 			mapVis04.invalidateSize();
-		  	opcoes=['Recife','Caruaru'];
+		  	opcoes=[];
 	        Vis04TutorialFunction(dataset);
     	}
 	});
